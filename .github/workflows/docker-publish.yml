@@ -24,11 +24,11 @@ jobs:
 
       - name: Build and push API Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/api:latest -f ./API/Dockerfile .
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/api:latest -f ./api/Dockerfile .
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/api:latest
 
       - name: Build and push Client Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/client:latest -f ./Client/Dockerfile .
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/client:latest -f ./client/Dockerfile .
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/client:latest
 
