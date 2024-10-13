@@ -31,4 +31,3 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/client:latest -f ./client/Dockerfile .
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/client:latest
-
