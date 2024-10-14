@@ -29,5 +29,5 @@ jobs:
 
       - name: Build and push Client Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/client:latest -f ./client/Dockerfile .
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/client:latest -f ./client/Dockerfile ./client
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/client:latest
