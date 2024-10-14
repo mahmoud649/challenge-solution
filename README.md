@@ -9,7 +9,7 @@ This repository contains the api and frontend app with :
 3. **docker-compose.yml**: in the root directory you can find the Docker compose file for running "nginx as the proxy, frontend, backend, and database(MySQL)" and creating the network and the database volume. 
 
 ## How to run the application (1)
-
+**First clone the repo then:**
 - **Run the docker-compose.yml**: use "docker compose up -d" command to pull the images from the docker hub and run the application in the background.
 - **Access the application**: use the browser at "localhost:443" to access the application.
 
