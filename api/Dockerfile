@@ -31,16 +31,13 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN composer install --no-dev --optimize-autoloader
 
 # Set proper permissions
-RUN chown -R www-data:www-data /var/www/html 
-RUN chmod -R 777 /var/www/html
+RUN chown -R www-data:www-data /var/www/html/ 
+RUN chmod +x ./entrypoint.sh
+RUN chmod -R 777 /var/www/html/
 
-#migrate database schema
-RUN php artisan migrate
-
-
-# Expose port 80
+# Expose port 8000
 EXPOSE 8000
 
-# Start Apache service
-CMD ["apache2-foreground"]
+# migrate database and start Apache service
+CMD ["./entrypoint.sh"]
 
