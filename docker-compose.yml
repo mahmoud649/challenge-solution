@@ -3,7 +3,7 @@ services:
   api: 
     image: mahmoud725/challenge-api:latest
     container_name: api
-    restart: unless-stopped
+    restart: always
     ports:
       - "8000:8000"
     depends_on:
@@ -23,6 +23,7 @@ services:
   client:
     image: mahmoud725/challenge-client:latest
     container_name: client
+    restart: always
     ports:
       - "3000:3000"
     depends_on:
@@ -33,7 +34,7 @@ services:
   db:
     image: mysql:latest
     container_name: mysql
-    restart: unless-stopped
+    restart: always
     environment:
       MYSQL_DATABASE: bookapi
       MYSQL_ROOT_PASSWORD: password
@@ -49,7 +50,7 @@ services:
   nginx:
     image: nginx:alpine
     container_name: nginx
-    restart: unless-stopped
+    restart: always
     ports:
       - 80:80
       - 443:443
