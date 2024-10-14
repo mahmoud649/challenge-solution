@@ -17,3 +17,6 @@ This repository contains the api and frontend app with :
 
 - **Run the docker-compose-build.yml**: first rename "docker-compose-build.yml"  to "docker-compose.yml" then use "docker compose up --build -d" command to build the images from the repo and run the application in the background.
 - **Access the application**: use the browser at "localhost:443" to access the application.
+
+
+* note : you need to specify the "api" host **IP** in hosts file in your working machine.
